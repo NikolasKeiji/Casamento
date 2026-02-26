@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+section {
+    min-height: 100svh;
+}
+
+
+:root{
+    --title: clamp(28px, 5vw, 50px);
+    --big: clamp(60px, 14vw, 200px);
+    --subtitle: clamp(18px, 2.5vw, 30px);
+}
+html, body{
+    overflow-x: hidden;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Kanzlei";
+    src: url(Font/Flaemische\ Kanzleischrift.ttf) format("truetype");
+    font-display: swap;
+}
+body {
+    color: #000000;
+    font-family: "Poppins";
+    margin: 0;
+    min-height: 100vh;
+}
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+header {
+position: absolute;
+width: 100%;
+z-index: 2;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+text-align: center;
+top: 20%;
+}
+.palavra {
+    width: min(90%, 500px);
+    font-weight: 500;   
+}
+.Mateus {
+    font-size: 20px;
+    padding: 8px;
+}
+.Casamento {
+    font-size: var(--title);
+    color: #0068FB;
+      text-shadow:
+        0 0 4px rgba(0,104,251,0.6),
+        0 0 10px rgba(0,104,251,0.5),
+        0 0 20px rgba(0,104,251,0.35);
+}   
+.fundo,
+.fundo1,
+.nuvem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fundo img,
+.fundo1 img,
+.nuvem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#data {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    padding-top: clamp(160px, 320px);
+}
+
+.imgdata{
+    width: 260px; 
+}
+    
+
+.datas {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 20%;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.dez {
+
+    font-size: var(--big);
+    color: #0068FB;
+      text-shadow:
+        0 0 4px rgba(0,104,251,0.6),
+        0 0 10px rgba(0,104,251,0.5),
+        0 0 20px rgba(0,104,251,0.35);
+}
+.nomes {
+    font-size: 40px;
+    font-family: "Kanzlei", serif;
+}
+
+.fundodatas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.fundodatas img {
+    width: 100%;
+    height: 100%;   position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    display: block;
+    
+}
+.data19 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; 
+    transform: translate(-20%)
+}
+
+.data19 h1 {
+    margin: 0;
+    line-height: 0.85;
+    
+}
+
+.data19 p {
+    margin: 0;
+    font-size: 24px;
+    width: 60%;
+}
+.buques {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(220px, 40vw, 420px);
+    z-index: 10;
+    pointer-events: none; 
+}
+#final {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 6vw 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FUNDO */
+
+.fundoconfirma {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.fundoconfirma img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fundoconfirmaa {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.fundoconfirmaa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.conteudo {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.endereco {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto; 
+    transform: translateY(120px);
+}
+
+.endereco h4 {
+    font-size: 32px;
+    font-weight: 800;
+    position: relative;
+}
+
+.endereco h4::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 40%;
+    height: 4px;
+    border-radius: 6px;
+    background: linear-gradient(90deg,#6ea8ff,#0068FB,#6ea8ff);
+}
+
+.endereco p {
+    margin-top: 14px;
+    font-size: 24px;
+    line-height: 1.6;
+}
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: 500;
+}
+
+.visto {
+    transform: translateY(-40px);
+}
+.qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+.lista-presentes {
+    padding: 8px 30px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(180deg,#0066ff,#4f7cff);
+    box-shadow:
+        0 4px 0 #2e5edb,
+        0 8px 18px rgba(0,0,0,.25),
+        0 0 18px rgba(0,104,251,.35);
+    transition: .18s ease;
+}
+.lista-presentes:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+.qr img {
+    width: 240px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25),
+        0 0 25px rgba(0,104,251,.25);
+}
+.confirmar {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.confirmar p {
+    font-weight: 500;
+   transform: translateY(10px);
+}
+
+.botao-confirmar {
+    padding: 18px 60px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(180deg,#0066ff,#4f7cff);
+    box-shadow:
+        0 4px 0 #2e5edb,
+        0 8px 18px rgba(0,0,0,.25),
+        0 0 18px rgba(0,104,251,.35);
+    transition: .18s ease;
+}
+
+.botao-confirmar:hover {
+    transform: translateY(-6px) scale(1.05);
+}
+
+@media (max-width: 768px){
+
+header{
+    top: 12%;
+}
+
+.datas{
+    flex-direction: column;
+    margin-top: 12vh;
+}
+.data19{
+     transform:none
+}
+  .imgdata img{
+        width: clamp(720px, 90vw, 920px);
+}
+.dez {
+    font-size: 160px;
+}
+
+#final{
+    align-items: flex-start;
+}
+
+/* endereço */
+.endereco{
+    transform: none;
+    margin: 40px auto 0;
+    padding: 0;
+}
+
+.endereco h4{
+    font-size: 26px;
+}
+
+.endereco p{
+    font-size: 18px;
+}
+
+/* linha vira coluna */
+.linha{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* cards centralizados */
+.cards{
+    justify-content: center;
+}
+
+/* qr */
+.qr img{
+    width: 200px;
+}
+
+/* botão confirmar */
+.botao-confirmar{
+    width: 100%;
+    max-width: 320px;
+    font-size: 18px;
+}
+
+/* botão lista */
+.lista-presentes{
+    width: 100%;
+    max-width: 260px;
+    font-size: 18px;
+}
+
+.confirmar{
+    padding-bottom: 20px;
+}
+}

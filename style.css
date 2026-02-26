@@ -353,21 +353,26 @@ header{
 }
 .dez {
     font-size: 140px;
+    transform: translateY(30px)
 }
 .data19 p {
     margin: 0;
     font-size: 20px;
     width: 60%;
+    transform: translateY(40px)
 }
 .nomes{
     display: flex;
+    flex-direction: row;   /* força lado a lado */
     justify-content: center;
     align-items: center;
     gap: 10px;
     font-size: 28px;
+    transform: translateY(50px);
 }
-
-
+.nomes h3{
+    display: inline-block;
+}
 #final{
     align-items: flex-start;
 }

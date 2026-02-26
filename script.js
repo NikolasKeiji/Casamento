@@ -137,9 +137,9 @@ gsap.from(".qr", {
   }
 });
 
-gsap.from(".botao", { 
+gsap.from(".botao-confirmar", { 
   y: 100,
-  duration: 3,
+  duration: 1,
   filter: "blur(20px)",
   opacity:0,
    scrollTrigger: {
@@ -150,7 +150,7 @@ gsap.from(".botao", {
 });
 gsap.from(".confirmar", {
   y:100,
-  duration:1,
+  duration:2,
   opacity:0,
   filter: "blur(20px)"
 }

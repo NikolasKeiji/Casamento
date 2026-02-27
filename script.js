@@ -5,7 +5,6 @@ window.addEventListener("load", () => {
 
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
 
-    ScrollTrigger.normalizeScroll(true);
 
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",

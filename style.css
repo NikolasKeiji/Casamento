@@ -1,4 +1,5 @@
-*{
+/* ================= GLOBAL ================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,125 +10,138 @@ img {
     height: auto;
 }
 
-
 section {
     min-height: 100svh;
 }
 
-
-:root{
+:root {
     --title: clamp(28px, 5vw, 50px);
     --big: clamp(60px, 14vw, 200px);
     --subtitle: clamp(18px, 2.5vw, 30px);
 }
-html, body{
-    overflow-x: hidden;
 
+html, body {
+    width: 100%;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
+
 @font-face {
     font-family: "Kanzlei";
     src: url(imagens/Font/Flaemische\ Kanzleischrift.ttf) format("truetype");
     font-display: swap;
 }
+
 body {
-    color: #000000;
-    font-family: "Poppins";
-    margin: 0;
-    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
 }
+#smooth-wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+#smooth-content {
+  min-height: 100%;
+}
+
+/* ================= HERO ================= */
 #hero {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    min-height: 100svh;
     overflow: hidden;
 }
 
+
 header {
-position: absolute;
-width: 100%;
-z-index: 2;
-justify-content: center;
-align-items: center;
-display: flex;
-flex-direction: column;
-text-align: center;
-top: 8%;
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .palavra {
     width: min(90%, 500px);
-    font-weight: 500;   
+    font-weight: 500;
 }
+
 .Mateus {
     font-size: 20px;
     padding: 8px;
 }
+
 .Casamento {
     font-size: var(--title);
     color: #002963;
-      text-shadow:
+    text-shadow:
         0 0 4px rgba(0,104,251,0.6),
         0 0 10px rgba(0,104,251,0.5),
         0 0 20px rgba(0,104,251,0.35);
-}   
-.fundo,
-.fundo1,
-.nuvem {
+}
+
+.fundo, .fundo1, .nuvem {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-}
-
-.fundo img,
-.fundo1 img,
-.nuvem img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
+
+/* ================= DATA ================= */
 #data {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    min-height: 100svh;
     overflow: hidden;
-    padding-top: clamp(160px, 320px);
+    padding-top: clamp(160px, 20vh, 320px);
 }
 
-.imgdata{
-    width: 260px; 
+.imgdata {
+    width: 260px;
 }
-    
+
+.imgdata img {
+    width: 100%;
+}
 
 .datas {
     display: flex;
     align-items: center;
-    text-align: center;
-    margin-top: 20%;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
+    text-align: center;
+    margin: 50px 10%;
 }
-.dez {
 
+.dez {
     font-size: var(--big);
     color: #0068FB;
-      text-shadow:
+    text-shadow:
         0 0 4px rgba(0,104,251,0.6),
         0 0 10px rgba(0,104,251,0.5),
         0 0 20px rgba(0,104,251,0.35);
 }
-.nomes{
+
+.nomes {
     font-size: 40px;
     font-family: "Kanzlei", serif;
     text-align: center;
 }
 
-.nomes h3{
+.nomes h3 {
     margin: 0;
 }
 
@@ -138,27 +152,25 @@ top: 8%;
     height: 100%;
     z-index: -1;
 }
+
 .fundodatas img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    z-index: -1;
 }
+
+/* Data19 */
 .data19 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px; 
-    transform: translate(-20%)
+    gap: 6px;
+    transform: translate(-20%);
 }
 
 .data19 h1 {
     margin: 0;
     line-height: 0.85;
-    
 }
 
 .data19 p {
@@ -166,52 +178,37 @@ top: 8%;
     font-size: 24px;
     width: 60%;
 }
-.buque-wrapper {
-    position: relative;
-    height: 0;
-}
 
+/* Buque */
 .buques {
-    position: relative;
     display: block;
     margin: -120px auto;
-     width: clamp(170px, 30vw, 260px);
+    width: clamp(170px, 30vw, 260px);
 }
+
+/* ================= FINAL ================= */
 #final {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 120px 6vw 80px;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 120px 6vw 80px;
+    margin-top: -300px;
 }
 
-/* FUNDO */
-
-.fundoconfirma {
+.fundoconfirma, .fundoconfirmaa {
     position: absolute;
     inset: 0;
     z-index: -1;
 }
 
-.fundoconfirma img {
+.fundoconfirma img, .fundoconfirmaa img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.fundoconfirmaa {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
-
-.fundoconfirmaa img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .conteudo {
     width: 100%;
@@ -220,11 +217,12 @@ top: 8%;
     flex-direction: column;
     gap: 60px;
 }
+
 .endereco {
     text-align: center;
     max-width: 650px;
-    margin: 0 auto; 
-    transform: translateY(120px);
+    margin: 0 auto;
+    transform: translateY(170px);
 }
 
 .endereco h4 {
@@ -249,12 +247,14 @@ top: 8%;
     margin-top: 14px;
     font-size: 24px;
 }
+
 .linha {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 60px;
 }
+
 .cards {
     display: flex;
     gap: 24px;
@@ -262,16 +262,41 @@ top: 8%;
     text-align: center;
     font-weight: 500;
 }
+.cards img {
+    transition: 
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 
+    border-radius: 50%; /* mantém redondo se já for */
+    
+    /* Neon roxo fixo */
+    box-shadow:
+        0 0 8px #8a2be2,
+        0 0 18px #8a2be2,
+        0 0 35px rgba(138,43,226,0.7);
+}
+
+/* Hover só na imagem */
+.cards img:hover {
+    transform: scale(1.1);
+
+    /* Neon rosa */
+    box-shadow:
+        0 0 10px #ff00c8,
+        0 0 25px #ff00c8,
+        0 0 50px rgba(255,0,200,0.8);
+}
 .visto {
     transform: translateY(-40px);
 }
+
 .qr {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 14px;
 }
+
 .lista-presentes {
     padding: 8px 30px;
     font-size: 22px;
@@ -280,32 +305,30 @@ top: 8%;
     border: none;
     border-radius: 14px;
     background: linear-gradient(180deg,#0066ff,#4f7cff);
-    box-shadow:
-        0 4px 0 #2e5edb,
-        0 8px 18px rgba(0,0,0,.25),
-        0 0 18px rgba(0,104,251,.35);
-    transition: .18s ease;
+    box-shadow: 0 4px 0 #2e5edb, 0 8px 18px rgba(0,0,0,.25), 0 0 18px rgba(0,104,251,.35);
+    transition: 0.18s ease;
 }
+
 .lista-presentes:hover {
     transform: translateY(-6px) scale(1.05);
 }
 
 .qr img {
-    width: 240px;
+    width: 200px;
     padding: 10px;
     background: #fff;
     border-radius: 12px;
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.25),
-        0 0 25px rgba(0,104,251,.25);
+    box-shadow: 0 10px 25px rgba(0,0,0,.25), 0 0 25px rgba(0,104,251,.25);
 }
+
 .confirmar {
     text-align: center;
     padding-bottom: 50px;
 }
+
 .confirmar p {
     font-weight: 500;
-   transform: translateY(10px);
+    transform: translateY(10px);
 }
 
 .botao-confirmar {
@@ -316,117 +339,48 @@ top: 8%;
     border: none;
     border-radius: 14px;
     background: linear-gradient(180deg,#0066ff,#4f7cff);
-    box-shadow:
-        0 4px 0 #2e5edb,
-        0 8px 18px rgba(0,0,0,.25),
-        0 0 18px rgba(0,104,251,.35);
-    transition: .18s ease;
+    box-shadow: 0 4px 0 #2e5edb, 0 8px 18px rgba(0,0,0,.25), 0 0 18px rgba(0,104,251,.35);
+    transition: 0.18s ease;
 }
 
 .botao-confirmar:hover {
     transform: translateY(-6px) scale(1.05);
 }
 
-@media (max-width: 768px){
+/* ================= RESPONSIVO ================= */
+@media (max-width: 999px) {
+    header { top: 12%; }
 
-header{
-    top: 12%;
-}
-.Casamento {
-    font-size: var(--title);
-    color: #08007b;
-      text-shadow:
-        0 0 4px rgba(0,104,251,0.6),
-        0 0 10px rgba(0,104,251,0.5),
-        0 0 20px rgba(0,104,251,0.35);
-}   
-.datas{
-    flex-direction: column;
-    margin-top: 130px;
-}
-.data19{
-     transform:none
-     
-}
-  .imgdata img{
-        width: clamp(720px, 90vw, 920px);
-}
-.dez {
-    font-size: 140px;
-    transform: translateY(30px)
-}
-.data19 p {
-    margin: 0;
-    font-size: 20px;
-    width: 60%;
-    transform: translateY(40px)
-}
-.nomes{
-    display: flex;
-    flex-direction: row;   /* força lado a lado */
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 28px;
-    transform: translateY(50px);
-}
-.nomes h3{
-    display: inline-block;
-}
-#final{
-    align-items: flex-start;
+    .Casamento { font-size: var(--title); }
+
+    .datas { flex-direction: column; padding-bottom: 120px; transform: translateY(-30px); }
+
+    .data19 { transform: none; }
+    .data19 p { font-size: 20px; transform: translateY(20px); }
+
+    .imgdata img { width: clamp(720px, 90vw, 920px); }
+    .dez { font-size: 140px; transform: translateY(30px); }
+
+    .nomes { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; font-size: 28px; transform: translateY(50px); }
+    .nomes h3 { display: inline-block; }
+
+    #final { align-items: flex-start; }
+
+    .endereco { transform: none; margin: 40px auto 0; padding-top:130px }
+    .endereco h4 { font-size: 26px;;}
+    .endereco p { font-size: 18px; }
+
+    .linha { flex-direction: column; align-items: center; gap: 40px; }
+    .cards { justify-content: center; }
+    .visto { transform: none; }
+
+    .qr img { width: 200px; }
+    .botao-confirmar { width: 100%; max-width: 390px; font-size: 24px; white-space: nowrap; overflow: hidden; text-align: center;}
+    .lista-presentes { width: 100%; max-width: 260px; font-size: 18px; }
+    .confirmar { padding-bottom: 20px; }
+
 }
 
-/* endereço */
-.endereco{
-    transform: none;
-    margin: 40px auto 0;
-    padding: 0;
-}
-
-.endereco h4{
-    font-size: 26px;
-}
-
-.endereco p{
-    font-size: 18px;
-}
-
-/* linha vira coluna */
-.linha{
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-/* cards centralizados */
-.cards{
-    justify-content: center;
-}
-.visto{
-    transform: none;
-}
-
-/* qr */
-.qr img{
-    width: 200px;
-}
-
-/* botão confirmar */
-.botao-confirmar{
-    width: 100%;
-    max-width: 320px;
-    font-size: 18px;
-}
-
-/* botão lista */
-.lista-presentes{
-    width: 100%;
-    max-width: 260px;
-    font-size: 18px;
-}
-
-.confirmar{
-    padding-bottom: 20px;
-}
+@media (max-width: 408px) {
+.botao-confirmar { width: 100%; max-width: 390px; font-size: 20px; white-space: nowrap; overflow: hidden; text-align: center;}
 }

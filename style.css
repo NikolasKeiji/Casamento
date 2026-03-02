@@ -270,9 +270,9 @@ header {
     
     /* Neon roxo fixo */
     box-shadow:
-        0 0 8px #8a2be2,
-        0 0 18px #8a2be2,
-        0 0 35px rgba(138,43,226,0.7);
+        0 0 8px #0099ff,
+        0 0 18px #0099ff,
+        0 0 35px #0099ff
 }
 
 /* Hover só na imagem */

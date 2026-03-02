@@ -79,9 +79,18 @@ header {
 
 .Mateus {
     font-size: 20px;
-    padding: 8px;
+    padding: 2px;
 }
-
+.convitenome {
+    font-family: "Kanzlei", serif;
+    font-size: 28px;
+    font-weight: 600;
+      color: #002963;
+    text-shadow:
+        0 0 4px rgba(0,104,251,0.6),
+        0 0 10px rgba(0,104,251,0.5),
+        0 0 20px rgba(0,104,251,0.35);
+}
 .Casamento {
     font-size: var(--title);
     color: #002963;
@@ -89,8 +98,8 @@ header {
         0 0 4px rgba(0,104,251,0.6),
         0 0 10px rgba(0,104,251,0.5),
         0 0 20px rgba(0,104,251,0.35);
+       transform: translateY(-16px);
 }
-
 .fundo, .fundo1, .nuvem {
     position: absolute;
     inset: 0;

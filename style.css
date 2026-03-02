@@ -359,7 +359,7 @@ header {
 @media (max-width: 999px) {
     header { top: 12%; }
 
-    .Casamento { font-size: var(--title); }
+    .Casamento { font-size: var(--title); transform: none; }
 
     .datas { flex-direction: column; padding-bottom: 120px; transform: translateY(-30px); }
 
